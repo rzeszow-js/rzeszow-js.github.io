@@ -53,7 +53,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* ------------------
-	Navigation 
+	Navigation
 ------------------ */
 .side-menu {
 	position: fixed;
@@ -265,33 +265,175 @@ ul.footer-menu li a:hover {
     right: 15px;
 }
 
-.animated { 
-    -webkit-animation-duration: 5s; 
-    animation-duration: 5s; 
-    -webkit-animation-fill-mode: both; 
-    animation-fill-mode: both; 
-    -webkit-animation-timing-function: linear; 
-    animation-timing-function: linear; 
-    animation-iteration-count:infinite; 
-    -webkit-animation-iteration-count:infinite; 
-} 
-
-@-webkit-keyframes bounce { 
-    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
-    40% {-webkit-transform: translateY(-30px);} 
-    60% {-webkit-transform: translateY(-15px);} 
-} 
-
-@keyframes bounce { 
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-30px);} 
-    60% {transform: translateY(-15px);} 
-} 
-
-.bounce { 
-    -webkit-animation-name: bounce; 
-    animation-name: bounce; 
+.animated {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
 }
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.block-padded {
+    padding-top: 100px;
+}
+
+.block-text {
+    text-align: left;
+}
+
+.postlist {
+    position: relative;
+    margin-right: 200px;
+    margin-left: 70px;
+    border-radius: 5px;
+    border: solid 1px #E5E5E5;
+    min-height: 300px;
+    margin-bottom: 62px;
+    padding: 20px;
+    padding-top: 100px;
+    background-color: #fff;
+}
+
+.post_container {
+    margin-left: 70px;
+}
+
+.post {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: dotted #ccc 1px;
+}
+
+.post_title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post_date {
+    position: absolute;
+    right: 100%;
+    top: 0%;
+    width: 50px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px 0 0 5px;
+    background-color: #016cc7;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 10px;
+    text-align: center;
+    transition: background-color .2s linear;
+}
+
+.post_date_day {
+    display: block;
+    font-size: 18px;
+}
+
+.post_date_day_delim {
+    display: none;
+}
+
+.post_header {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.post_content {
+    min-height: 3em;
+    line-height: 1.5;
+}
+
+.post_content p {
+    margin: 1em 0;
+}
+
+.__index .section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.section__top {
+}
+
+/* ========================================
+    Custom blog modifications
+======================================== */
+
+/* ablog related */
+
+ul.ablog-cloud {
+    list-style: none;
+    overflow: auto;
+}
+
+ul.ablog-cloud li {
+    float: left;
+    height: 20pt;
+    line-height: 18pt;
+    margin-right: 5px;
+}
+
+ul.ablog-cloud a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+li.ablog-cloud-1 {
+    font-size: 80%;
+}
+
+li.ablog-cloud-2 {
+    font-size: 95%;
+}
+
+li.ablog-cloud-3 {
+    font-size: 110%;
+}
+
+li.ablog-cloud-4 {
+    font-size: 125%;
+}
+
+li.ablog-cloud-5 {
+    font-size: 140%;
+}
+
+.topmost_section {
+    padding-top: 80px
+}
+
 
 /* ========================================
     Custom Media Queries
