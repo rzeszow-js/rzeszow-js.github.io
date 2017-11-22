@@ -1,0 +1,47 @@
+<div>
+  {% if post.published %}
+  {% if fa %}<i class="fa fa-calendar"></i>{% endif %}
+    {{ post.date.strftime(gettext(ablog.post_date_format)) }}
+  {% else %}
+    {% if fa %}<i class="fa fa-pencil"></i>{% endif %}
+    {% if post.date %}{{ post.date.strftime(gettext(ablog.post_date_format)) }}
+    {% else %} Draft {% endif %}
+  {% endif %}
+</div>
+
+  {% if post.location %}
+  <span>{% if fa %}<i class="fa-fw fa fa-location-arrow"></i>{% else %}{{ gettext('Location') }}:{% endif %}
+    {% for coll in post.location %}
+      {% if coll|length %}
+      <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.location|length %},{% endif %}
+      {% else %}{{ coll }}{% if loop.index < post.location|length %},{% endif %}{% endif %}
+    {% endfor %}</span>
+  {% endif %}
+
+  {% if post.language %}
+  <span>{% if fa %}<i class="fa-fw fa fa-language"></i>{% else %}{{ gettext('Language') }}:{% endif %}
+    {% for coll in post.language %}
+      {% if coll|length %}
+      <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.language|length %},{% endif %}
+      {% else %}{{ coll }}{% if loop.index < post.language|length %},{% endif %}{% endif %}
+    {% endfor %}</span>
+  {% endif %}
+
+  {% if post.category %}
+  <span>{% if fa %}<i class="fa-fw fa fa-folder-open"></i>{% else %}{{ gettext('Category') }}:{% endif %}
+    {% for coll in post.category %}
+      {% if coll|length %}
+      <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.category|length %},{% endif %}
+      {% else %}{{ coll }}{% if loop.index < post.category|length %},{% endif %}{% endif %}
+    {% endfor %}</span>
+  {% endif %}
+
+  {% if post.tags %}
+  <span>{% if post.tags|length > 1 %}{% if fa %}<i class="fa-fw fa fa-tags"></i>{% else %}{{ gettext('Tags') }}:{% endif %}
+      {% else %}{% if fa %}<i class="fa-fw fa fa-tag"></i>{% else %}{{ gettext('Tag') }}:{% endif %}{% endif %}
+    {% for coll in post.tags %}
+      {% if coll|length %}
+      <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.tags|length %},{% endif %}
+      {% else %}{{ coll }}{% if loop.index < post.tags|length %},{% endif %}{% endif %}
+    {% endfor %}</span>
+  {% endif %}

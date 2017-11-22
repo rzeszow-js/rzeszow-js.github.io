@@ -1,0 +1,53 @@
+<article class="post post__text">
+  <header class="post_header">
+    <h2 class="post_title">
+      <a href="{{ pathto(post.docname) }}{{ anchor(post) }}">{{ post.title }}</a>
+    </h2>
+    <div class="post_date">
+      <span class="post_date_day">{{ post.date.strftime("%d") }}</span>
+      <span class="post_date_day_delim">/</span>
+      {{ post.date.strftime("%m") }}/{{ post.date.strftime("%Y") }}
+    </div>
+  </header>
+  <div class="post_content">
+    {% if post.tags %}
+    <div>{% if post.tags|length > 1 %}{% if fa %}<i class="fa-fw fa fa-tags"></i>{% else %}{{ gettext('Tags') }}:{% endif %}
+        {% else %}{% if fa %}<i class="fa-fw fa fa-tag"></i>{% else %}{{ gettext('Tag') }}:{% endif %}{% endif %}
+      {% for coll in post.tags %}
+        {% if coll|length %}
+        <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.tags|length %},{% endif %}
+        {% else %}{{ coll }}{% if loop.index < post.tags|length %},{% endif %}{% endif %}
+      {% endfor %}</div>
+    {% endif %}
+    {% if post.category %}
+    <div>{% if fa %}<i class="fa-fw fa fa-folder-open"></i>{% else %}{{ gettext('Category') }}:{% endif %}
+      {% for coll in post.category %}
+        {% if coll|length %}
+        <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.category|length %},{% endif %}
+        {% else %}{{ coll }}{% if loop.index < post.category|length %},{% endif %}{% endif %}
+      {% endfor %}</div>
+    {% endif %}
+    {% if post.location %}
+    <div>{% if fa %}<i class="fa-fw fa fa-location-arrow"></i>{% else %}{{ gettext('Location') }}:{% endif %}
+      {% for coll in post.location %}
+        {% if coll|length %}
+        <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.location|length %},{% endif %}
+        {% else %}{{ coll }}{% if loop.index < post.location|length %},{% endif %}{% endif %}
+      {% endfor %}</div>
+    {% endif %}
+
+    {% if post.language %}
+    <div>{% if fa %}<i class="fa-fw fa fa-language"></i>{% else %}{{ gettext('Language') }}:{% endif %}
+      {% for coll in post.language %}
+        {% if coll|length %}
+        <a href="{{ pathto(coll.docname) }}">{{ coll }}</a>{% if loop.index < post.language|length %},{% endif %}
+        {% else %}{{ coll }}{% if loop.index < post.language|length %},{% endif %}{% endif %}
+      {% endfor %}</div>
+    {% endif %}
+
+    {{ post.to_html(collection.docname) }}
+    <p class="read_more_container">
+      <a href="{{ pathto(post.docname) }}{{ anchor(post) }}" class="read_more">Read more ...</a>
+    </p>
+  </div>
+</article>

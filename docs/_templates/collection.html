@@ -1,0 +1,24 @@
+{%- extends "page.html" %}
+{% block body %}
+  <div class="section postlist">
+
+    <h1>{% if archive_feed and fa %}
+      <a href="{{ pathto(collection.path, 1) }}/atom.xml"><i class="fa fa-rss fa-rotate-270"></i></a>{% endif %}
+      {{ header }}
+      {% if collection.href %}
+      <a href="{{ collection.href }}">{{ collection }}</a>
+      {% else %}
+      {{ collection }}
+      {% endif %}
+    </h1>
+    {% if ablog.blog_archive_titles %}
+    {% for post in collection %}
+      {% include "post_article_block_short.html" %}
+    {% endfor %}
+    {% else %}
+    {% for post in collection %}
+      {% include "post_article_block_short.html" %}
+    {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}

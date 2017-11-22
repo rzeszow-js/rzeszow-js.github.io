@@ -1,0 +1,15 @@
+{%- extends "page.html" %}
+{% block body %}
+  {% for collection in catalog %}
+  {% if collection %}
+  <div class="section postlist">
+    <h2>{{ header }}
+      <a href="{{ pathto(collection.docname) }}">{{ collection }}</a>
+    </h2>
+    {% for post in collection %}
+      {% include "post_article_block_short.html" %}
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endfor %}
+{% endblock %}
