@@ -59,27 +59,17 @@
 
                 .. raw:: html
 
-                    <img src="_static/img/speaker-1.png" class="speaker-img">
-                    <h3>to be announced</h3>
-                    <p>Speaker is practicing contractor that cooperates with startups around the globe</p>
-                    <ul class="speaker-social">
-                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                    </ul>
+                    <img src="_static/img/speaker-slawek.png" class="speaker-img">
+                    <h3>Sławomir</h3>
+                    <p></p>
 
             .. container:: col-md-4 col-sm-6 feature
 
                 .. raw:: html
 
-                    <img src="_static/img/speaker-2.png" class="speaker-img">
-                    <h3>to be announced</h3>
-                    <p>....</p>
-                    <ul class="speaker-social">
-                    <li><a href="#"><span class="ti-facebook"></span></a></li>
-                    <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                    <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                    </ul>
+                    <img src="_static/img/speaker-slavik.png" class="speaker-img">
+                    <h3>Vyacheslav</h3>
+                    <p></p>
 
     .. container:: container-fluid tickets
 
@@ -91,15 +81,15 @@
 
                 .. raw:: html
 
-                    <h3>to be announced</h3>
-                    <p>....</p>
+                    <h3>Classic Way On Deploying NodeJs Application</h3>
+                    <p></p>
 
             .. container:: col-md-4 col-sm-6
 
                 .. raw:: html
 
-                    <h3>to be announced</h3>
-                    <p>.....</p>
+                    <h3>HyperProxy - Backend Tool For Front-End Developer</h3>
+                    <p></p>
 
     .. container:: container
 
@@ -125,12 +115,12 @@
                             <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                <img class="media-object" src="_static/img/speaker-1.png" alt="...">
+                                <img class="media-object" src="_static/img/speaker-slawek.png" alt="...">
                                 </a>
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">19:00 to 19:30</h4>
-                                <h5>to be announced</h5>
+                                <h5>HyperProxy - Backend Tool For Front-End Developers</h5>
                                 <p></p>
                             </div>
                             </div>
@@ -143,13 +133,13 @@
                             <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                <img class="media-object" src="_static/img/speaker-4.png" alt="...">
+                                <img class="media-object" src="_static/img/speaker-slavik.png" alt="...">
                                 </a>
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">19:30 to 20:00</h4>
-                                <h5>...</h5>
-                                <p>...</p>
+                                <h5>Classic Way On Deploying NodeJs Application</h5>
+                                <p></p>
                             </div>
                             </div>
                         </div>
