@@ -2,20 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">softasap Blog</title>
   <id>True/blog/atom.xml</id>
-  <updated>2017-10-23T00:00:00Z</updated>
+  <updated>2017-11-30T00:00:00Z</updated>
   <link href="True" />
   <link href="True/blog/atom.xml" rel="self" />
   <generator uri="http://ablog.readthedocs.org" version="0.8.4">ABlog</generator>
   <entry xml:base="True/blog/atom.xml">
-    <title type="text">Test blog post</title>
-    <id>True/blog/test-post.html</id>
-    <updated>2017-10-23T00:00:00Z</updated>
-    <published>2017-10-23T00:00:00Z</published>
-    <link href="True/blog/test-post.html" />
+    <title type="text">Meetup #2: Let's meet each other and talk!</title>
+    <id>True/blog/meetup-2.html</id>
+    <updated>2017-11-30T00:00:00Z</updated>
+    <published>2017-11-30T00:00:00Z</published>
+    <link href="True/blog/meetup-2.html" />
     <author>
-      <name>Vyacheslav</name>
+      <name>editor</name>
     </author>
-    <content type="html">&lt;p&gt;Embedded presentation&lt;/p&gt;
-</content>
   </entry>
 </feed>
