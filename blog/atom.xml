@@ -15,5 +15,10 @@
     <author>
       <name>editor</name>
     </author>
+    <content type="html">&lt;p&gt;hyperProxy, to server napisany w node.js. Wykorzystuje on mechanizm
+ataku &lt;a class=&quot;reference external&quot; href=&quot;https://pl.wikipedia.org/wiki/Atak_man_in_the_middle&quot;&gt;MITM&lt;/a&gt;
+aby przechwytywać requesty i w zależności od zdefiniowanych reguł
+zwracać rezultat w odpowiedni sposób.&lt;/p&gt;
+</content>
   </entry>
 </feed>

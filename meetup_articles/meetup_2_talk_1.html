@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Talk 1: hyperProxy - backend tool for frontend developers</title>
+  
+
+  <!-- to choose between font awesome and themify -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+
+  <!-- Bootstrap -->
+  <link href=".././_static/css/bootstrap.min.css" rel="stylesheet">
+  <link href=".././_static/css/style.css" rel="stylesheet">
+  <link href=".././_static/css/themify-icons.css" rel="stylesheet">
+  <link href=".././_static/css/dosis-font.css" rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".side-menu">
+
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/index.html">
+        Rzeszów JavaScript Developers
+      </a>       
+    </div>
+  </div>
+</nav>
+
+      
+
+
+<div class="section" id="talk-1-hyperproxy-backend-tool-for-frontend-developers">
+<span id="hyperproxy"></span><h1>Talk 1: hyperProxy - backend tool for frontend developers<a class="headerlink" href="#talk-1-hyperproxy-backend-tool-for-frontend-developers" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="co-to-jest-hyperproxy">
+<h1>Co to jest hyperProxy?<a class="headerlink" href="#co-to-jest-hyperproxy" title="Permalink to this headline">¶</a></h1>
+<p>hyperProxy, to server napisany w node.js. Wykorzystuje on mechanizm
+ataku <a class="reference external" href="https://pl.wikipedia.org/wiki/Atak_man_in_the_middle">MITM</a>
+aby przechwytywać requesty i w zależności od zdefiniowanych reguł
+zwracać rezultat w odpowiedni sposób.</p>
+</div>
+<div class="section" id="jakie-sa-wymagania">
+<h1>Jakie są wymagania?<a class="headerlink" href="#jakie-sa-wymagania" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://nodejs.org/en/">node.js</a> - w wersji 4.x.x lub nowszy moduł
+<a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a> - do
+ściągnięcia z githuba przeglądarka (np. Google Chrome)</p>
+</div>
+<div class="section" id="kiedy-warto-uzywac">
+<h1>Kiedy warto używać?<a class="headerlink" href="#kiedy-warto-uzywac" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Kiedy z jakiegoś powodu nie masz dostępu do backendu a potrzebujesz
+móc przygotować poprawki dla frontendu,</li>
+<li>Kiedy na produkcji pojawi się błąd, którego nie możesz odtworzyć w
+środowisku lokalnym i potrzebujesz debugować kod produkcyjny
+(zminifikowany),</li>
+<li>Kiedy jako front-end developer nie chcesz mieć zainstalowanych 5
+serverów bazodanowych, JDK, .NET SDK, PHP, Python, Go, Ruby i wielu
+innych, a jednocześnie chcesz móc zmienić dowolne elementy warstwy
+działającej w przeglądarce,</li>
+<li>Kiedy z jakiegoś powodu klient nie może dać Ci dostępu do backendu
+(lub też jego odtworzenie jest zbyt skomplikowane)</li>
+<li>Kiedy chcesz zacząć pracę mimo, że klient nie dał Ci jeszcze dostępu
+do repozytorium</li>
+</ul>
+</div>
+<div class="section" id="jak-tego-uzyc">
+<h1>Jak tego użyć?<a class="headerlink" href="#jak-tego-uzyc" title="Permalink to this headline">¶</a></h1>
+<p>Na początek ściągnij repozytorium
+<a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a> ze
+strony autora. Jeśli ściągnąłeś zip-a - rozpakuj go. W katalogu
+&#8216;example&#8217; znajdziesz plik &#8216;example.js&#8217;, który zawiera definicję 2
+obiektów: - overrides, - settings Pierwszy z nich odpowiada za &#8216;reguły
+nadpisywania&#8217; (zestaw funkcji określających jak się zachować gdy URL
+wpisany w przeglądarce koresponduje z ustawieniami w funkcji). Moduł
+pozwala na pisanie własnych funkcji, jednak zawiera również kilka
+predefiniowanych, które z pomocą regex-ów w praktyce pozwalają na
+obsługę 99% requestów. Drugi plik to ustawienia samego servera proxy. W
+najprostszej wersji mówimy na jakim porcie ma działać, ewentualnie
+podajemy ścieżki do certyfikatów niezbędnych do obsługi ruchu po https.
+Ostatnia rzecz, której potrzebujemy, to certyfikat SSL dla lokalnej
+maszyny. Informacje o tym jak go wygenerować znajdziecie zarówno na
+stronie projektu
+<a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a> jak i na
+<a class="reference external" href="http://bfy.tw/FcqJ">milionie innych stron w internecie</a>, więc nie
+będę się nad tym rozwodził. Szczegółowe ustawienia dotyczące
+konfiguracji narzędzia znajdziecie w pliku README.md projektu
+hyperProxy. W samym narzędziu zdefiniowałem konfigurację proxy, która
+przepuszcza cały ruch (http i https) przez :8000 (domyślne ustawienia z
+hyperProxy). Kolejną rzecz, którą należy skonfigurować to ustawienia
+przeglądarki związane z używaniem serwera proxy. Aby ułatwić sobie życie
+w tym obszarze używam rozszerzenia do Chrome&#8217;a - <a class="reference external" href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">Proxy
+SwitchyOmega</a>.
+Gdy uruchomimy server - magia zaczyna działać. No tak ... ale też szybko
+dostrzeżemy pierwsze problemy. W szczególności może być nim ruch po
+https. Wiele CDNów lub API blokuje ruch &#8220;podrobionych&#8221; certyfikatów z
+użyciem
+<a class="reference external" href="https://pl.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>.
+Na szczęście finalnie to nasza przeglądarka decyduje o tym, czy i jak
+obsłużyć daną zawartość a nie dostawca. Aby &#8220;zmusić&#8221; Chrome&#8217;a do
+poprawnej współpracy z w takiej sytuacji należy <a class="reference external" href="chrome://flags/#allow-insecure-localhost">włączyć ustawienia w
+przeglądarce związane z obsługą nieprawidłowych
+certyfikatów</a>. Ostatnią
+rzeczą jest uruchomienie przeglądarki. W przypadku Chrome&#8217;a potrzebne
+jest dodanie dodatkowej flagi, więc finalnie polecenie uruchamiające
+wygląda w moim przypadku następująco:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;&lt;sciezka-do-przegladarki-chrome&gt;\chrome.exe&quot;</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">certificate</span><span class="o">-</span><span class="n">errors</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pytania">
+<h1>Pytania?<a class="headerlink" href="#pytania" title="Permalink to this headline">¶</a></h1>
+<p>Jeśli masz jakieś pytania - <a class="reference external" href="mailto:slawomir&#46;pasko&#37;&#52;&#48;gmail&#46;com">skontaktuj się ze
+mną</a>, jeśli tylko będę w stanie na
+pewno pomogę.</p>
+</div>
+<div class="section" id="podziekowania">
+<h1>Podziękowania<a class="headerlink" href="#podziekowania" title="Permalink to this headline">¶</a></h1>
+<p>Dla <a class="reference external" href="https://github.com/ahwayakchih">Marcina</a>, który kilka lat temu
+pokazał mi to narzędzie Dla
+<a class="reference external" href="https://github.com/Voronenko">Vyacheslava</a>, który zmotywował mnie do
+tego abym powiedział kilka słów na meetup&#8217;ie</p>
+</div>
+
+
+
+
+
+  
+
+
+      <!-- Start: Footer -->
+<div class="container-fluid footer">
+  <div class="row footer-credit">
+    <div class="col-md-6 col-sm-6">
+      <p>&copy; 2017, </p>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <ul class="footer-menu">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="blog/archive.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+ </div>
+<!-- End: Footer -->
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src=".././_static/js/jquery.min.js" ></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src=".././_static/js/bootstrap.min.js" ></script>
+      <script src=".././_static/js/jquery.easing.min.js" ></script>
+      <script src=".././_static/js/scrolling-nav.js" ></script>
+      <script src=".././_static/js/validator.js" ></script>
+    </body>
+    </html>
