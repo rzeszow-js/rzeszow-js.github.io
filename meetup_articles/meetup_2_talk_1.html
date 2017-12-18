@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Talk 1: hyperProxy - backend tool for frontend developers</title>
+  <title>hyperProxy -</title>
   
 
   <!-- to choose between font awesome and themify -->
@@ -44,24 +44,28 @@
       
 
 
-<div class="section" id="talk-1-hyperproxy-backend-tool-for-frontend-developers">
-<span id="hyperproxy"></span><h1>Talk 1: hyperProxy - backend tool for frontend developers<a class="headerlink" href="#talk-1-hyperproxy-backend-tool-for-frontend-developers" title="Permalink to this headline">¶</a></h1>
-</div>
+<div class="section" id="hyperproxy">
+<span id="id1"></span><h1>hyperProxy -<a class="headerlink" href="#hyperproxy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="backend-tool-for-frontend-developers">
+<h2>backend tool for frontend developers<a class="headerlink" href="#backend-tool-for-frontend-developers" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="co-to-jest-hyperproxy">
-<h1>Co to jest hyperProxy?<a class="headerlink" href="#co-to-jest-hyperproxy" title="Permalink to this headline">¶</a></h1>
+<h3>Co to jest hyperProxy?<a class="headerlink" href="#co-to-jest-hyperproxy" title="Permalink to this headline">¶</a></h3>
 <p>hyperProxy, to server napisany w node.js. Wykorzystuje on mechanizm
 ataku <a class="reference external" href="https://pl.wikipedia.org/wiki/Atak_man_in_the_middle">MITM</a>
 aby przechwytywać requesty i w zależności od zdefiniowanych reguł
 zwracać rezultat w odpowiedni sposób.</p>
 </div>
 <div class="section" id="jakie-sa-wymagania">
-<h1>Jakie są wymagania?<a class="headerlink" href="#jakie-sa-wymagania" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://nodejs.org/en/">node.js</a> - w wersji 4.x.x lub nowszy moduł
-<a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a> - do
-ściągnięcia z githuba przeglądarka (np. Google Chrome)</p>
+<h3>Jakie są wymagania?<a class="headerlink" href="#jakie-sa-wymagania" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://nodejs.org/en/">node.js</a> - w wersji 4.x.x lub nowszy,</li>
+<li>moduł <a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a>
+- do ściągnięcia z githuba,</li>
+<li>przeglądarka (np. Google Chrome)</li>
+</ul>
 </div>
 <div class="section" id="kiedy-warto-uzywac">
-<h1>Kiedy warto używać?<a class="headerlink" href="#kiedy-warto-uzywac" title="Permalink to this headline">¶</a></h1>
+<h3>Kiedy warto używać?<a class="headerlink" href="#kiedy-warto-uzywac" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Kiedy z jakiegoś powodu nie masz dostępu do backendu a potrzebujesz
 móc przygotować poprawki dla frontendu,</li>
@@ -79,33 +83,34 @@ do repozytorium</li>
 </ul>
 </div>
 <div class="section" id="jak-tego-uzyc">
-<h1>Jak tego użyć?<a class="headerlink" href="#jak-tego-uzyc" title="Permalink to this headline">¶</a></h1>
+<h3>Jak tego użyć?<a class="headerlink" href="#jak-tego-uzyc" title="Permalink to this headline">¶</a></h3>
 <p>Na początek ściągnij repozytorium
 <a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a> ze
 strony autora. Jeśli ściągnąłeś zip-a - rozpakuj go. W katalogu
 &#8216;example&#8217; znajdziesz plik &#8216;example.js&#8217;, który zawiera definicję 2
-obiektów: - overrides, - settings Pierwszy z nich odpowiada za &#8216;reguły
-nadpisywania&#8217; (zestaw funkcji określających jak się zachować gdy URL
-wpisany w przeglądarce koresponduje z ustawieniami w funkcji). Moduł
-pozwala na pisanie własnych funkcji, jednak zawiera również kilka
-predefiniowanych, które z pomocą regex-ów w praktyce pozwalają na
-obsługę 99% requestów. Drugi plik to ustawienia samego servera proxy. W
-najprostszej wersji mówimy na jakim porcie ma działać, ewentualnie
-podajemy ścieżki do certyfikatów niezbędnych do obsługi ruchu po https.
-Ostatnia rzecz, której potrzebujemy, to certyfikat SSL dla lokalnej
-maszyny. Informacje o tym jak go wygenerować znajdziecie zarówno na
-stronie projektu
+obiektów: - overrides, - settings</p>
+<p>Pierwszy z nich odpowiada za &#8216;reguły nadpisywania&#8217; (zestaw funkcji
+określających jak się zachować gdy URL wpisany w przeglądarce
+koresponduje z ustawieniami w funkcji). Moduł pozwala na pisanie
+własnych funkcji, jednak zawiera również kilka predefiniowanych, które z
+pomocą regex-ów w praktyce pozwalają na obsługę 99% requestów. Drugi
+plik to ustawienia samego servera proxy. W najprostszej wersji mówimy na
+jakim porcie ma działać, ewentualnie podajemy ścieżki do certyfikatów
+niezbędnych do obsługi ruchu po https. Ostatnia rzecz, której
+potrzebujemy, to certyfikat SSL dla lokalnej maszyny. Informacje o tym
+jak go wygenerować znajdziecie zarówno na stronie projektu
 <a class="reference external" href="https://github.com/Hypermediaisobar/hyperProxy">hyperProxy</a> jak i na
 <a class="reference external" href="http://bfy.tw/FcqJ">milionie innych stron w internecie</a>, więc nie
-będę się nad tym rozwodził. Szczegółowe ustawienia dotyczące
-konfiguracji narzędzia znajdziecie w pliku README.md projektu
-hyperProxy. W samym narzędziu zdefiniowałem konfigurację proxy, która
-przepuszcza cały ruch (http i https) przez :8000 (domyślne ustawienia z
-hyperProxy). Kolejną rzecz, którą należy skonfigurować to ustawienia
-przeglądarki związane z używaniem serwera proxy. Aby ułatwić sobie życie
-w tym obszarze używam rozszerzenia do Chrome&#8217;a - <a class="reference external" href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">Proxy
-SwitchyOmega</a>.
-Gdy uruchomimy server - magia zaczyna działać. No tak ... ale też szybko
+będę się nad tym rozwodził.</p>
+<p>Szczegółowe ustawienia dotyczące konfiguracji narzędzia znajdziecie w
+pliku README.md projektu hyperProxy. W samym narzędziu zdefiniowałem
+konfigurację proxy, która przepuszcza cały ruch (http i https) przez
+:8000 (domyślne ustawienia z hyperProxy).</p>
+<p>Kolejną rzecz, którą należy skonfigurować to ustawienia przeglądarki
+związane z używaniem serwera proxy. Aby ułatwić sobie życie w tym
+obszarze używam rozszerzenia do Chrome&#8217;a - <a class="reference external" href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif">Proxy
+SwitchyOmega</a>.</p>
+<p>Gdy uruchomimy server - magia zaczyna działać. No tak ... ale też szybko
 dostrzeżemy pierwsze problemy. W szczególności może być nim ruch po
 https. Wiele CDNów lub API blokuje ruch &#8220;podrobionych&#8221; certyfikatów z
 użyciem
@@ -114,26 +119,31 @@ Na szczęście finalnie to nasza przeglądarka decyduje o tym, czy i jak
 obsłużyć daną zawartość a nie dostawca. Aby &#8220;zmusić&#8221; Chrome&#8217;a do
 poprawnej współpracy z w takiej sytuacji należy <a class="reference external" href="chrome://flags/#allow-insecure-localhost">włączyć ustawienia w
 przeglądarce związane z obsługą nieprawidłowych
-certyfikatów</a>. Ostatnią
-rzeczą jest uruchomienie przeglądarki. W przypadku Chrome&#8217;a potrzebne
-jest dodanie dodatkowej flagi, więc finalnie polecenie uruchamiające
-wygląda w moim przypadku następująco:</p>
+certyfikatów</a>.</p>
+<p>Ostatnią rzeczą jest uruchomienie przeglądarki. W przypadku Chrome&#8217;a
+potrzebne jest dodanie dodatkowej flagi, więc finalnie polecenie
+uruchamiające wygląda w moim przypadku następująco:</p>
 <div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;&lt;sciezka-do-przegladarki-chrome&gt;\chrome.exe&quot;</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">certificate</span><span class="o">-</span><span class="n">errors</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="pytania">
-<h1>Pytania?<a class="headerlink" href="#pytania" title="Permalink to this headline">¶</a></h1>
-<p>Jeśli masz jakieś pytania - <a class="reference external" href="mailto:slawomir&#46;pasko&#37;&#52;&#48;gmail&#46;com">skontaktuj się ze
+<h3>Pytania?<a class="headerlink" href="#pytania" title="Permalink to this headline">¶</a></h3>
+<p>Jeśli masz jakieś pytania - <a class="reference external" href="https://github.com/slawomir-pasko">skontaktuj się ze
 mną</a>, jeśli tylko będę w stanie na
 pewno pomogę.</p>
 </div>
 <div class="section" id="podziekowania">
-<h1>Podziękowania<a class="headerlink" href="#podziekowania" title="Permalink to this headline">¶</a></h1>
-<p>Dla <a class="reference external" href="https://github.com/ahwayakchih">Marcina</a>, który kilka lat temu
-pokazał mi to narzędzie Dla
-<a class="reference external" href="https://github.com/Voronenko">Vyacheslava</a>, który zmotywował mnie do
-tego abym powiedział kilka słów na meetup&#8217;ie</p>
+<h3>Podziękowania<a class="headerlink" href="#podziekowania" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Dla <a class="reference external" href="https://github.com/ahwayakchih">Marcina</a>, który kilka lat
+temu pokazał mi to narzędzie,</li>
+<li>Dla <a class="reference external" href="https://github.com/Voronenko">Vyacheslava</a>, który zmotywował
+mnie do tego abym powiedział kilka słów na meetup&#8217;ie,</li>
+<li>Wszystkich obecnych na meetup&#8217;ie :)</li>
+</ul>
+</div>
+</div>
 </div>
 
 
