@@ -28,7 +28,7 @@ Meetup #2: Let's meet each other and talk!
                         <div class="media">
                         <div class="media-left">
                             <a href="#">
-                            <img class="media-object" src="_static/img/speaker-slawek.png" alt="...">
+                            <img class="media-object" src="/_static/img/speaker-slawek.png" alt="...">
                             </a>
                         </div>
                         <div class="media-body">
@@ -46,7 +46,7 @@ Meetup #2: Let's meet each other and talk!
                         <div class="media">
                         <div class="media-left">
                             <a href="#">
-                            <img class="media-object" src="_static/img/speaker-slavik.png" alt="...">
+                            <img class="media-object" src="/_static/img/speaker-slavik.png" alt="...">
                             </a>
                         </div>
                         <div class="media-body">
@@ -59,6 +59,49 @@ Meetup #2: Let's meet each other and talk!
                     </div>
                 </div>
 
+Talk 1:  hyperProxy - backend tool for frontend developers
+----------------------------------------------------------
+
+Co to jest hyperProxy?
+======================
+
+hyperProxy, to server napisany w node.js. Wykorzystuje on mechanizm
+ataku `MITM <https://pl.wikipedia.org/wiki/Atak_man_in_the_middle>`__
+aby przechwytywać requesty i w zależności od zdefiniowanych reguł
+zwracać rezultat w odpowiedni sposób.
+
+Jakie są wymagania?
+===================
+
+`node.js <https://nodejs.org/en/>`__ - w wersji 4.x.x lub nowszy moduł
+`hyperProxy <https://github.com/Hypermediaisobar/hyperProxy>`__ - do
+ściągnięcia z githuba przeglądarka (np. Google Chrome)
+
+Kiedy warto używać?
+===================
+
+-  Kiedy z jakiegoś powodu nie masz dostępu do backendu a potrzebujesz
+   móc przygotować poprawki dla frontendu,
+-  Kiedy na produkcji pojawi się błąd, którego nie możesz odtworzyć w
+   środowisku lokalnym i potrzebujesz debugować kod produkcyjny
+   (zminifikowany),
+-  Kiedy jako front-end developer nie chcesz mieć zainstalowanych 5
+   serverów bazodanowych, JDK, .NET SDK, PHP, Python, Go, Ruby i wielu
+   innych, a jednocześnie chcesz móc zmienić dowolne elementy warstwy
+   działającej w przeglądarce,
+-  Kiedy z jakiegoś powodu klient nie może dać Ci dostępu do backendu
+   (lub też jego odtworzenie jest zbyt skomplikowane)
+-  Kiedy chcesz zacząć pracę mimo, że klient nie dał Ci jeszcze dostępu
+   do repozytorium
+
+Jak tego użyć?
+
+:ref:`Read more <hyperproxy>`
+
+For pdf, please see :download:`hyperProxy <../../assets/hyperproxy.pdf>`.
+
+.. _meetup_2_2:
+
 Talk 2:  Classic Way On Deploying NodeJs Application
 ----------------------------------------------------
 
@@ -66,4 +109,6 @@ Talk 2:  Classic Way On Deploying NodeJs Application
 
     <iframe src="/slides/meetup_2_talk_2.html" height="800px" width="100%"></iframe>
 
-    
+Demo node application: https://github.com/voronenko-p/node-sample
+
+Provisioning project: https://github.com/Voronenko/devops-node-box-template

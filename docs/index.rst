@@ -77,6 +77,16 @@
 
             Talks info
 
+            .. container:: col-md-4 col-sm-6
+
+                .. raw:: html
+
+                    <h3>HyperProxy - Backend Tool For Front-End Developer</h3>
+                    <p></p>
+
+                :ref:`hyperproxy`
+
+
             .. container:: col-md-4 col-sm-6 col-md-offset-2
 
                 .. raw:: html
@@ -84,12 +94,8 @@
                     <h3>Classic Way On Deploying NodeJs Application</h3>
                     <p></p>
 
-            .. container:: col-md-4 col-sm-6
+                :ref:`meetup_2_2`
 
-                .. raw:: html
-
-                    <h3>HyperProxy - Backend Tool For Front-End Developer</h3>
-                    <p></p>
 
     .. container:: container
 
@@ -154,3 +160,4 @@
    index_all_elems.rst
    about.rst
    contact.rst
+   meetup_articles/meetup_2_talk_1.rst

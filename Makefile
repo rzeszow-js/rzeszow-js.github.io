@@ -6,11 +6,14 @@ all: p-env/bin/pip docs
 
 docs: out/html/index.html
 
-out/html/index.html: README.rst docs/_static/css/* p-env/bin/sphinx-build # docs/_templates/* preprocess_sources
+out/html/index.html: README.rst docs/_static/css/* p-env/bin/sphinx-build preprocess_sources
 	@echo "Ablog build ${PWD}"
 	@p-env/bin/sphinx-build -W docs out/html
 	@touch $@
 	@echo "Website was generated at '$@'."
+
+preprocess_sources: assets/*
+	p-env/bin/python code/bin/generate-docs
 
 docs_sources: docs/*.rst
 
