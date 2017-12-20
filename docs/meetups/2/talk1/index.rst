@@ -98,6 +98,8 @@ Jeśli masz jakieś pytania - `skontaktuj się ze
 mną <https://github.com/slawomir-pasko>`__, jeśli tylko będę w stanie na
 pewno pomogę.
 
+PDF :download:`hyperProxy <hyperproxy.pdf>`.
+
 Podziękowania
 -------------
 
@@ -106,4 +108,3 @@ Podziękowania
 -  Dla `Vyacheslava <https://github.com/Voronenko>`__, który zmotywował
    mnie do tego abym powiedział kilka słów na meetup'ie,
 -  Wszystkich obecnych na meetup'ie :)
-

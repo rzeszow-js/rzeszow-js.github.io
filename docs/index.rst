@@ -160,4 +160,4 @@
    index_all_elems.rst
    about.rst
    contact.rst
-   meetup_articles/meetup_2_talk_1.rst
+   meetups/index.rst

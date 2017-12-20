@@ -1,7 +1,4 @@
-.. post:: Nov 30, 2017
-   :tags: meetup, meetup2
-   :author: editor
-   :category: meetup
+.. _meetup2:
 
 Meetup #2: Let's meet each other and talk!
 ==========================================
@@ -98,15 +95,21 @@ Jak tego użyć?
 
 :ref:`Read more <hyperproxy>`
 
-For pdf, please see :download:`hyperProxy <../meetups/2/talk1/hyperproxy.pdf>`.
+For pdf, please see :download:`hyperProxy <talk1/hyperproxy.pdf>`.
+
 
 Talk 2:  Classic Way On Deploying NodeJs Application
 ----------------------------------------------------
 
-.. raw:: html
-
-    <iframe src="/slides/meetup_2_talk_2.html" height="800px" width="100%"></iframe>
+Presentation: :ref:`check it out <meetup_2_2>`
 
 Demo node application: https://github.com/voronenko-p/node-sample
 
 Provisioning project: https://github.com/Voronenko/devops-node-box-template
+
+
+.. toctree::
+   :hidden:
+
+   talk1/index.rst
+   talk2/index.rst
