@@ -2,7 +2,7 @@
 actdiag==0.5.4
 alabaster==0.7.10
 arrow==0.10.0
-Babel==2.5.0
+Babel==2.9.1
 blockdiag==1.5.3
 certifi==2017.7.27.1
 chardet==3.0.4
